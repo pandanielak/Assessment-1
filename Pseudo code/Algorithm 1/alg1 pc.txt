@@ -1,0 +1,5 @@
+1. Create variable highestMark and lowestMark.
+2. Iterate each mark in studentMarks array.
+3. Check highestMark for each iteration and update if the value of highestMark is lower.
+4. Check lowestMark for each iteration and update if the value of lowestMark is higher.
+5. Print highestMark and lowestMark on screen.
