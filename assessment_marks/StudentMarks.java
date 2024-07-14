@@ -32,6 +32,20 @@ public class StudentMarks {
             }
         }
         
+        
+        int highestMark = studentMarks[0];
+        int lowestMark = studentMarks[0];
+        
+        // Finding the highest and lowest marks
+        for (int i = 1; i < studentMarks.length; i++) {
+            if (studentMarks[i] > highestMark) {
+                highestMark = studentMarks[i];
+            }
+            if (studentMarks[i] < lowestMark) {
+                lowestMark = studentMarks[i];
+            }
+        }
+        
         // Print assignment name and student marks
         System.out.println("Assignment Name: " + assignmentName);
         System.out.println("Student Marks: ");
@@ -39,6 +53,9 @@ public class StudentMarks {
             System.out.println("Student " + (i + 1) + ": " + studentMarks[i]);
         }
         
+        // Print highest and lowest marks
+        System.out.println("Highest Mark: " + highestMark);
+        System.out.println("Lowest Mark: " + lowestMark);        
         scanner.close();
     }
 }
