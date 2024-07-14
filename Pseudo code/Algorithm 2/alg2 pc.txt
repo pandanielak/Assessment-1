@@ -1,0 +1,5 @@
+1. Calculate sum of marks 'sumOfMarks'
+2. Calculate mean by dividing sum by number of marks: mean = sumOfMarks/30.
+3. Calculate sum of squared differences from mean 'sumOfSquaredDifferences' and divide by number of marks to get variance 'variance'.
+4. Calculate standard deviation 'standardDeviation' by square rooting variance.
+5. Print mean and standard deviation.
