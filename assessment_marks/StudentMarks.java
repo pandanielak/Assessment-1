@@ -32,7 +32,7 @@ public class StudentMarks {
             }
         }
         
-        
+      
         int highestMark = studentMarks[0];
         int lowestMark = studentMarks[0];
         
@@ -46,6 +46,28 @@ public class StudentMarks {
             }
         }
         
+       // Calculating sum of marks
+        int sumOfMarks = 0;
+        for (int i = 0; i < studentMarks.length; i++) {
+            sumOfMarks += studentMarks[i];
+        }
+        
+        // Calculating mean
+        double assignmentMean = (double) sumOfMarks / studentMarks.length;
+        
+        // Calculating sum of squared differences from the mean
+        double sumOfSquaredDifferences = 0;
+        for (int i = 0; i < studentMarks.length; i++) {
+            double difference = studentMarks[i] - assignmentMean;
+            sumOfSquaredDifferences += difference * difference;
+        }
+        
+        // Calculating variance
+        double variance = sumOfSquaredDifferences / studentMarks.length;
+        
+        // Calculating standard deviation
+        double standardDeviation = Math.sqrt(variance);
+        
         // Print assignment name and student marks
         System.out.println("Assignment Name: " + assignmentName);
         System.out.println("Student Marks: ");
@@ -55,7 +77,12 @@ public class StudentMarks {
         
         // Print highest and lowest marks
         System.out.println("Highest Mark: " + highestMark);
-        System.out.println("Lowest Mark: " + lowestMark);        
+        System.out.println("Lowest Mark: " + lowestMark);
+
+        // Print mean and standard deviation
+        System.out.println("Mean: " + assignmentMean);
+        System.out.println("Standard Deviation: " + standardDeviation);
+        
         scanner.close();
     }
 }
